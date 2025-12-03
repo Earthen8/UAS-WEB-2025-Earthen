@@ -1,53 +1,55 @@
 # ✈️ SkyTravel - Flight Booking App
+**UAS Web Application Development - Semester Ganjil 2025 — Prasetiya Mulya University**
 
-**UAS Web Application Development - Semester Ganjil 2025** **Prasetiya Mulya University**
-
-Aplikasi web pencarian tiket pesawat real-time yang terintegrasi dengan Amadeus API. Dibangun menggunakan Django Framework dengan antarmuka modern bertema macOS.
+Aplikasi web pencarian tiket pesawat real-time terintegrasi dengan Amadeus API, dibangun menggunakan Django dengan UI modern bertema macOS.
 
 ---
 
 ## 🛠 Tech Stack
-* **Backend:** Django 5.x (Python)
-* **Frontend:** HTML5, Tailwind CSS (via CDN), Vanilla JS
-* **API Integration:** Amadeus Flight Offers Search API
-* **Design System:** macOS Big Sur/Monterey Style (Glassmorphism & Native UI)
+- **Backend:** Django 5.x (Python)
+- **Frontend:** HTML5, Tailwind CSS (CDN), Vanilla JS
+- **API:** Amadeus Flight Offers Search API
+- **Design:** macOS Big Sur/Monterey Style (Glassmorphism)
 
 ---
 
-## ✨ Fitur Unggulan
-1.  **Realtime Flight Search:** Data penerbangan langsung dari Global Distribution System (GDS) via Amadeus.
-2.  **macOS UI Experience:** Desain antarmuka mengikuti style guide macOS.
-3.  **Smart Validation:**
-    * Validasi kode bandara (IATA 3-letter code only).
-    * Validasi tanggal (H+1 logic untuk round trip).
-    * Validasi form penumpang (Nama & Paspor).
-4.  **Round Trip Support:** Logika otomatis untuk menangani perjalanan pulang-pergi.
-5.  **Multi-City Parsing:** Akurasi data rute transit (mengambil segmen awal keberangkatan dan segmen akhir tujuan).
-6.  **Responsive Design:** Mobile-first approach, tampilan beradaptasi sempurna di desktop maupun layar smartphone.
+## ✨ Fitur
+1. Realtime flight search (GDS – Amadeus)
+2. UI bergaya macOS
+3. Smart validation (IATA code, tanggal, penumpang)
+4. Round trip support
+5. Multi-city parsing dengan transit route detection
+6. Responsive (mobile-first)
 
 ---
 
-## 🚀 Cara Menjalankan Project
+## 🚀 Cara Menjalankan
 
-### 1. Clone Repository
+### 1. Clone Repo
 ```bash
-git clone <repository_url_anda>
+git clone <url-repository-anda>
 cd uas_travel
+```
 
-### 2. Setup Virtual Environment (Recommended)
-Windows:
+### 2. Buat Virtual Environment
 ```bash
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # Linux / Mac
+```
 
-### 3. Install Dependencies
+### 3. Install Dependency
 ```bash
 pip install django amadeus python-dotenv
+```
 
-### 4. Konfigurasi API Key (.env)
-AMADEUS_API_KEY=masukkan_api_key_disini
-AMADEUS_API_SECRET=masukkan_api_secret_disini
+### 4. Tambahkan .env
+```env
+AMADEUS_API_KEY=isi_key
+AMADEUS_API_SECRET=isi_secret
+```
 
-### 5. Jalankan Server
+### 5. Run
 ```bash
 python manage.py runserver
+```
