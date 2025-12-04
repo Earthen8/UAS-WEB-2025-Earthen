@@ -10,7 +10,7 @@ def parse_flight_data(flight_raw):
         segments = itinerary.get('segments', [])
         if not segments: return None
             
-        first_segment = segments[0]  
+        first_segment = segments[0]
         last_segment = segments[-1]  
         
         raw_duration = itinerary.get('duration', '')
@@ -77,6 +77,9 @@ def flight_booking(request):
         'carrier': request.GET.get('carrier'),
         'number': request.GET.get('number'),
         'origin': request.GET.get('origin'),
-        'destination': request.GET.get('destination')
+        'destination': request.GET.get('destination'),
+        'dep_time': request.GET.get('dep_time'),
+        'duration': request.GET.get('duration'),
+        'return_date': request.GET.get('return_date'),
     }
     return render(request, 'booking.html', context)

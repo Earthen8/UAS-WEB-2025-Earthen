@@ -27,10 +27,22 @@
 
         <div class="mb-8">
             <h3 class="text-sm font-bold text-gray-900 mb-2">Flight Info:</h3>
-            <div class="text-sm text-gray-500 font-mono bg-gray-50 p-3 rounded border border-gray-200">
-                {{ carrier }} {{ number }}<br>
-                {{ origin }} ➝ {{ destination }}<br>
-                Price: {{ price }}
+            <div class="text-sm text-gray-500 font-mono bg-gray-50 p-4 rounded border border-gray-200 leading-relaxed">
+                
+                <span class="font-bold text-gray-700">{{ carrier }} {{ number }}</span><br>
+                
+                {{ origin }} ➝ {{ destination }} ({{ duration }})<br>
+                
+                Departure: {{ dep_time }}<br>
+                
+                {% if return_date and return_date != 'None' %}
+                Return Date: {{ return_date }}<br>
+                {% endif %}
+                
+                <div class="mt-2 pt-2 border-t border-gray-200 font-bold text-emerald-600">
+                    Price: {{ price }}
+                </div>
+
             </div>
         </div>
 
