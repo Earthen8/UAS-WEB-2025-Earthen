@@ -27,7 +27,7 @@ Aplikasi web pencarian tiket pesawat real-time terintegrasi dengan Amadeus API, 
 
 ### 1. Clone Repo
 ```bash
-git clone <url-repository-anda>
+git clone https://github.com/Earthen8/UAS-WEB-2025-Earthen.git
 cd uas_travel
 ```
 
