@@ -6,16 +6,16 @@ Aplikasi web pencarian tiket pesawat real-time terintegrasi dengan Amadeus API, 
 ---
 
 ## 🛠 Tech Stack
-- **Backend:** Django 5.x (Python)
+- **Backend:** Django 5.2.9 (Python)
 - **Frontend:** HTML5, Tailwind CSS (CDN), Vanilla JS
 - **API:** Amadeus Flight Offers Search API
-- **Design:** macOS Big Sur/Monterey Style (Glassmorphism)
+- **Design:** macOS Big Sur Style
 
 ---
 
 ## ✨ Fitur
-1. Realtime flight search (GDS – Amadeus)
-2. UI bergaya macOS
+1. Realtime flight search
+2. UI macOS Style
 3. Smart validation (IATA code, tanggal, penumpang)
 4. Round trip support
 5. Multi-city parsing dengan transit route detection
@@ -35,7 +35,7 @@ cd uas_travel
 ```bash
 python -m venv venv
 venv\Scripts\activate  # Windows
-# source venv/bin/activate  # Linux / Mac
+source venv/bin/activate  # Linux / Mac
 ```
 
 ### 3. Install Dependency
